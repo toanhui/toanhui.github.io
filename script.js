@@ -34,7 +34,7 @@ window.onload = function() {
     placeFood();
     document.addEventListener("keydown", changeDirection);
     // update();
-    setInterval(update, 1000/10);
+    setInterval(update, 1000/7);
 }
 
 function update() {
@@ -68,7 +68,7 @@ function update() {
         context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize);
     }
 
-    if(snakeX < 0 || snakex > cols * blockSize || snakeY < 0 || snakeY > row*blockSize) {
+    if(snakeX < 0 || snakeX > cols * blockSize || snakeY < 0 || snakeY > row*blockSize) {
         gameOver = true;
         alert("Game Over!");
     }
@@ -77,6 +77,7 @@ function update() {
         if(snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) {
             gameOver = true;
             alert("Game Over!");
+            
             
         }
     }
