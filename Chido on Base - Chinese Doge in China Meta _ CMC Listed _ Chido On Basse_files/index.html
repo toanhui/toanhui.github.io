@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://html-classic.itch.zone/html/11424502/Itch/index.html -->
+<html love-deals="879BC0364EB9EBEE3DBE71B15E175613"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="manifest" href="https://html-classic.itch.zone/html/11424502/Itch/manifest.webmanifest">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #000000;
+            overflow: hidden;
+		}
+        #canvasArea {
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+        }
+
+        
+	</style>
+    <!-- Libs and GDJS core files : -->
+		<script src="./jshashtable.js.download" crossorigin="anonymous"></script>
+	<script src="./logger.js.download" crossorigin="anonymous"></script>
+	<script src="./gd.js.download" crossorigin="anonymous"></script>
+	<script src="./rbush.js.download" crossorigin="anonymous"></script>
+	<script src="./AsyncTasksManager.js.download" crossorigin="anonymous"></script>
+	<script src="./inputmanager.js.download" crossorigin="anonymous"></script>
+	<script src="./jsonmanager.js.download" crossorigin="anonymous"></script>
+	<script src="./Model3DManager.js.download" crossorigin="anonymous"></script>
+	<script src="./ResourceLoader.js.download" crossorigin="anonymous"></script>
+	<script src="./ResourceCache.js.download" crossorigin="anonymous"></script>
+	<script src="./timemanager.js.download" crossorigin="anonymous"></script>
+	<script src="./polygon.js.download" crossorigin="anonymous"></script>
+	<script src="./runtimeobject.js.download" crossorigin="anonymous"></script>
+	<script src="./profiler.js.download" crossorigin="anonymous"></script>
+	<script src="./RuntimeInstanceContainer.js.download" crossorigin="anonymous"></script>
+	<script src="./runtimescene.js.download" crossorigin="anonymous"></script>
+	<script src="./scenestack.js.download" crossorigin="anonymous"></script>
+	<script src="./force.js.download" crossorigin="anonymous"></script>
+	<script src="./RuntimeLayer.js.download" crossorigin="anonymous"></script>
+	<script src="./layer.js.download" crossorigin="anonymous"></script>
+	<script src="./RuntimeCustomObjectLayer.js.download" crossorigin="anonymous"></script>
+	<script src="./timer.js.download" crossorigin="anonymous"></script>
+	<script src="./runtimewatermark.js.download" crossorigin="anonymous"></script>
+	<script src="./runtimegame.js.download" crossorigin="anonymous"></script>
+	<script src="./variable.js.download" crossorigin="anonymous"></script>
+	<script src="./variablescontainer.js.download" crossorigin="anonymous"></script>
+	<script src="./oncetriggers.js.download" crossorigin="anonymous"></script>
+	<script src="./runtimebehavior.js.download" crossorigin="anonymous"></script>
+	<script src="./SpriteAnimator.js.download" crossorigin="anonymous"></script>
+	<script src="./spriteruntimeobject.js.download" crossorigin="anonymous"></script>
+	<script src="./affinetransformation.js.download" crossorigin="anonymous"></script>
+	<script src="./CustomRuntimeObjectInstanceContainer.js.download" crossorigin="anonymous"></script>
+	<script src="./CustomRuntimeObject.js.download" crossorigin="anonymous"></script>
+	<script src="./CustomRuntimeObject2D.js.download" crossorigin="anonymous"></script>
+	<script src="./commontools.js.download" crossorigin="anonymous"></script>
+	<script src="./variabletools.js.download" crossorigin="anonymous"></script>
+	<script src="./runtimescenetools.js.download" crossorigin="anonymous"></script>
+	<script src="./inputtools.js.download" crossorigin="anonymous"></script>
+	<script src="./objecttools.js.download" crossorigin="anonymous"></script>
+	<script src="./cameratools.js.download" crossorigin="anonymous"></script>
+	<script src="./soundtools.js.download" crossorigin="anonymous"></script>
+	<script src="./storagetools.js.download" crossorigin="anonymous"></script>
+	<script src="./stringtools.js.download" crossorigin="anonymous"></script>
+	<script src="./windowtools.js.download" crossorigin="anonymous"></script>
+	<script src="./networktools.js.download" crossorigin="anonymous"></script>
+	<script src="./gd-logo-light.js.download" crossorigin="anonymous"></script>
+	<script src="./pixi.js.download" crossorigin="anonymous"></script>
+	<script src="./pixi-filters-tools.js.download" crossorigin="anonymous"></script>
+	<script src="./runtimegame-pixi-renderer.js.download" crossorigin="anonymous"></script>
+	<script src="./runtimescene-pixi-renderer.js.download" crossorigin="anonymous"></script>
+	<script src="./layer-pixi-renderer.js.download" crossorigin="anonymous"></script>
+	<script src="./pixi-image-manager.js.download" crossorigin="anonymous"></script>
+	<script src="./pixi-bitmapfont-manager.js.download" crossorigin="anonymous"></script>
+	<script src="./spriteruntimeobject-pixi-renderer.js.download" crossorigin="anonymous"></script>
+	<script src="./CustomRuntimeObject2DPixiRenderer.js.download" crossorigin="anonymous"></script>
+	<script src="./DebuggerPixiRenderer.js.download" crossorigin="anonymous"></script>
+	<script src="./loadingscreen-pixi-renderer.js.download" crossorigin="anonymous"></script>
+	<script src="./pixi-effects-manager.js.download" crossorigin="anonymous"></script>
+	<script src="./howler.min.js.download" crossorigin="anonymous"></script>
+	<script src="./howler-sound-manager.js.download" crossorigin="anonymous"></script>
+	<script src="./fontfaceobserver.js.download" crossorigin="anonymous"></script>
+	<script src="./fontfaceobserver-font-manager.js.download" crossorigin="anonymous"></script>
+	<script src="./gdjs-evtsext__linearmovement__linearmovement.js.download" crossorigin="anonymous"></script>
+	<script src="./gdjs-evtsext__panelspritebutton__buttonfsm.js.download" crossorigin="anonymous"></script>
+	<script src="./gdjs-evtsext__panelspritebutton__panelspritebutton.js.download" crossorigin="anonymous"></script>
+	<script src="./gdjs-evtsext__screenwrap__screenwrap.js.download" crossorigin="anonymous"></script>
+	<script src="./gdjs-evtsext__sinemovement__sinemovement.js.download" crossorigin="anonymous"></script>
+	<script src="./anchorruntimebehavior.js.download" crossorigin="anonymous"></script>
+	<script src="./destroyoutsideruntimebehavior.js.download" crossorigin="anonymous"></script>
+	<script src="./leaderboardstools.js.download" crossorigin="anonymous"></script>
+	<script src="./sha256.js.download" crossorigin="anonymous"></script>
+	<script src="./panelspriteruntimeobject-pixi-renderer.js.download" crossorigin="anonymous"></script>
+	<script src="./panelspriteruntimeobject.js.download" crossorigin="anonymous"></script>
+	<script src="./particleemitterobject-pixi-renderer.js.download" crossorigin="anonymous"></script>
+	<script src="./particleemitterobject.js.download" crossorigin="anonymous"></script>
+	<script src="./pixi-particles-pixi-renderer.min.js.download" crossorigin="anonymous"></script>
+	<script src="./platformerobjectruntimebehavior.js.download" crossorigin="anonymous"></script>
+	<script src="./platformruntimebehavior.js.download" crossorigin="anonymous"></script>
+	<script src="./platformtools.js.download" crossorigin="anonymous"></script>
+	<script src="./playerauthenticationcomponents.js.download" crossorigin="anonymous"></script>
+	<script src="./playerauthenticationtools.js.download" crossorigin="anonymous"></script>
+	<script src="./systeminfotools.js.download" crossorigin="anonymous"></script>
+	<script src="./textinputruntimeobject-pixi-renderer.js.download" crossorigin="anonymous"></script>
+	<script src="./textinputruntimeobject.js.download" crossorigin="anonymous"></script>
+	<script src="./textruntimeobject-pixi-renderer.js.download" crossorigin="anonymous"></script>
+	<script src="./textruntimeobject.js.download" crossorigin="anonymous"></script>
+	<script src="./tiledspriteruntimeobject-pixi-renderer.js.download" crossorigin="anonymous"></script>
+	<script src="./tiledspriteruntimeobject.js.download" crossorigin="anonymous"></script>
+	<script src="./TweenManager.js.download" crossorigin="anonymous"></script>
+	<script src="./tweenruntimebehavior.js.download" crossorigin="anonymous"></script>
+	<script src="./AnimatableBehavior.js.download" crossorigin="anonymous"></script>
+	<script src="./EffectBehavior.js.download" crossorigin="anonymous"></script>
+	<script src="./FlippableBehavior.js.download" crossorigin="anonymous"></script>
+	<script src="./OpacityBehavior.js.download" crossorigin="anonymous"></script>
+	<script src="./ResizableBehavior.js.download" crossorigin="anonymous"></script>
+	<script src="./ScalableBehavior.js.download" crossorigin="anonymous"></script>
+	<script src="./TextContainerBehavior.js.download" crossorigin="anonymous"></script>
+	<script src="./glow-pixi-filter.js.download" crossorigin="anonymous"></script>
+	<script src="./outline-pixi-filter.js.download" crossorigin="anonymous"></script>
+	<script src="./filter-glow.js.download" crossorigin="anonymous"></script>
+	<script src="./filter-outline.js.download" crossorigin="anonymous"></script>
+	<script src="./code0.js.download" crossorigin="anonymous"></script>
+	<script src="./code1.js.download" crossorigin="anonymous"></script>
+	<script src="./code2.js.download" crossorigin="anonymous"></script>
+	<script src="./data.js.download" crossorigin="anonymous"></script>
+
+
+<style>
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+
+          5% {
+            transform: rotate(-10deg);
+            animation-timing-function: ease-out;
+          }
+
+          17% {
+            transform: rotate(370deg);
+            animation-timing-function: ease-in-out;
+          }
+
+          20% {
+            transform: rotate(360deg);
+            animation-timing-function: ease-in-out;
+          }
+
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        #watermark-background {
+          position: absolute;
+          pointer-events: none;
+          width: 100%;
+          transition-property: opacity;
+          transition-duration: 0.3s;
+        }
+
+        #watermark-link {
+          all: unset;
+          position: absolute;
+          cursor: pointer;
+          pointer-events: none;
+          user-select: none;
+
+          /* For Safari */
+          -webkit-user-select: none;
+        }
+
+        #watermark {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          transition-property: opacity;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-out;
+        }
+
+        #watermark > div {
+          display: flex;
+          flex-direction: column;
+          margin-left: 5px;
+        }
+
+        #watermark span {
+          color: white;
+          font-family: 'Tahoma', 'Gill sans', 'Helvetica', 'Arial';
+          font-size: 14px;
+          transition: opacity;
+          transition-duration: 0.3s;
+
+          /* For Safari */
+          -webkit-transition: opacity;
+          -webkit-transition-duration: 0.3s;
+        }
+
+        #watermark svg.spinning {
+          animation-name: spin;
+          animation-direction: normal;
+          animation-duration: 5s;
+          animation-iteration-count: 3;
+          animation-delay: 1.5s;
+        }
+
+        #watermark svg path {
+          fill: white;
+        }
+
+        @media (hover: hover) {
+          #watermark span {
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-color: transparent;
+          }
+
+          #watermark:hover span {
+            text-decoration-color: white;
+
+            /* For Safari */
+            -webkit-text-decoration-color: white;
+          }
+        }
+        </style><title></title></head>
+<body>
+
+    
+	<script>
+
+    (function() {
+        //Initialization
+        var game = new gdjs.RuntimeGame(gdjs.projectData, {});
+
+        //Create a renderer
+        game.getRenderer().createStandardCanvas(document.body);
+
+        //Bind keyboards/mouse/touch events
+        game.getRenderer().bindStandardEvents(game.getInputManager(), window, document);
+
+        //Load all assets and start the game
+        game.loadAllAssets(function() {
+            game.startGameLoop();
+        });
+    })();
+
+	</script><canvas width="960" height="540" tabindex="1" style="touch-action: none; position: absolute; user-select: none; outline: none; top: 0.3125px; left: 0px; width: 1222px; height: 687.375px; cursor: inherit;"></canvas><div style="position: absolute; overflow: hidden; outline: none; pointer-events: none; user-select: none; top: 0.3125px; left: 0px; width: 1222px; height: 687.375px;"><div id="watermark-background" style="height: 89.3588px; opacity: 1; bottom: 0px; background-image: linear-gradient(0deg, rgba(38, 38, 38, 0.6) 0%, rgba(38, 38, 38, 0) 100%); display: none;"></div><a id="watermark-link" href="https://gd.games/m4rrk0121?utm_source=gdevelop-game&amp;utm_medium=game-watermark&amp;utm_campaign=d1a52da2-d0a9-4cff-b246-19a3ea6aa189" target="_blank" style="bottom: 10px; left: 10px; pointer-events: all;"><div id="watermark" style="opacity: 1; display: none;"><svg height="33" width="41.2425" viewBox="-2 -2 59 48" fill="none" class="spinning"><path d="M29.3447 33C25.1061 33 21.0255 31.8475 17.4207 29.3381C14.9081 27.5897 12 23.6418 12 16.9488C12 4.53178 18.3074 0 30.9827 0H53.8027L56 7.07232H32.7217C24.3558 7.07232 19.3813 7.72835 19.3813 16.9488C19.3813 19.9944 20.2354 22.1618 21.9933 23.574C24.9642 25.9612 30.7388 26.0628 34.2673 25.7208C34.2673 25.7208 35.715 21.0394 35.9534 20.2794C36.2327 19.3888 36.1104 19.1763 35.2392 19.1763C33.9808 19.1763 31.7185 19.1763 29.3175 19.1763C27.6349 19.1763 25.9818 18.3247 25.9818 16.2793C25.9818 14.3039 27.5198 13.1573 29.6281 13.1573C33.2786 13.1573 40.7969 13.1573 42.2041 13.1573C44.0489 13.1573 45.9315 13.4233 44.971 16.3601L39.8842 31.8734C39.8845 31.8738 35.7287 33 29.3447 33Z"></path><path d="M43.3039 35.3278C40.7894 37.1212 37.0648 38.1124 30.7449 38.1124C19.852 38.1124 11.8797 34.1251 8.62927 26.3952C7.0925 22.7415 7.24041 18.6005 7.24041 13H0.00129513C0.00129513 18.9056 -0.0984386 23.5361 1.45249 27.8011C5.51933 38.989 15.992 45 30.0606 45C43.6783 45 49.3213 41.0443 53 35.3278H43.3039Z"></path></svg><div><span style="font-size: 17.1844px; opacity: 0; line-height: 0;">Made with GDevelop</span><span style="font-size: 17.1844px; opacity: 1; line-height: normal;">@m4rrk0121</span></div></div></a></div>
+
+
+</body></html>
