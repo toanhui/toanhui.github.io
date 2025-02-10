@@ -214,9 +214,15 @@
     <!-- Centered Image -->
     <img src="./CHINSKI_files/a3.jpg" alt="Chinski in China" class="middle-image">
     <!-- Contract Address -->
-    <div class="contract-address" onclick="copyToClipboard(this)">
+    <div class="contract-address" id="Caa">
       CA: SOON
     </div>
+    <script>
+      // Select the paragraph element by its ID
+      var newCA = "SOON";
+      var descriptionElement = document.getElementById("Caa");
+      descriptionElement.textContent = newCA;
+    </script>
 
     <!-- Buy Now Button -->
     <button class="buy-now" onclick="#">Buy $ROS</button>
