@@ -1,0 +1,90 @@
+IoT Devices Trong DApp Chia Sẻ Tài Sản
+
+- IoT đóng vai trò là cầu nối giữa blockchain và tài sản vật lý, giúp kiểm soát tài sản dựa trên trạng thái của NFT và smartcontract. Để triển khai, cần tích hợp cảm biến, bộ điều khiển thông minh, và phần mềm xác thực blockchain. //phần IOT nếu còn thời gian ta sẽ làm (dự định là sẽ làm minh họa trên ESP32/Adurno
+
+- Phần Web
+Ứng dụng di động/Web App: Để người thuê xác thực NFT và mở khóa tài sản. 
+Hợp đồng thông minh (Smart Contract): Kiểm tra quyền sở hữu NFT & quyết định mở khóa.
+Gateway API: Kết nối IoT device với blockchain thông qua API hoặc MQTT.
+
+
+(1) Mở khóa xe bằng NFT 
+🛠 Cấu hình:
+
+Xe có khóa thông minh điều khiển bằng Raspberry Pi/ESP32.
+Xe kết nối với blockchain qua API/WebSocket.
+🔄 Quy trình:
+
+Người thuê nhận NFT khóa xe trong ví Cardano.(ta mặc định dùng eternl cho đầy đủ chức năng nhá)
+Khi đến gần xe, họ kết nối với ứng dụng di động.
+Ứng dụng gửi NFT đến khóa thông minh để xác thực.
+Nếu hợp lệ, xe mở khóa và cho phép khởi động.
+Sau khi thời gian thuê kết thúc, NFT hết hiệu lực, xe tự động khóa.
+(2) Mở cửa nhà bằng NFT (Decentralized Airbnb)
+🛠 Cấu hình:
+
+Cửa có khóa thông minh hỗ trợ NFC hoặc Bluetooth.
+Raspberry Pi hoặc ESP32 kết nối với blockchain thông qua API.
+🔄 Quy trình:
+
+Người thuê hoàn tất thanh toán và nhận NFT trong ví.
+Đến căn hộ, họ mở ứng dụng & quét NFC/QR Code trên khóa cửa.
+Thiết bị kiểm tra xem NFT có hợp lệ hay không:
+✅ Hợp lệ → Mở cửa.
+❌ Không hợp lệ → Từ chối truy cập.
+Khi thời gian thuê hết, NFT mất hiệu lực, cửa từ chối mở.
+(3) Thuê thiết bị (Laptop, Drone, Máy ảnh, Công cụ)
+🛠 Cấu hình:
+
+Mỗi thiết bị có một khoang lưu trữ khóa thông minh.
+Người thuê sử dụng ví blockchain để mở khoang và lấy thiết bị.
+
+🔄 Quy trình:
+
+Người thuê gửi tiền cọc & nhận NFT mở khoang chứa thiết bị.
+Đến kho chứa, quét ví để mở khoang & lấy thiết bị.
+Khi hoàn trả thiết bị, hệ thống xác nhận & hoàn tiền cọc.
+Quy Trình Mở Cửa Xe Bằng NFT
+1️⃣ Đăng ký xe & cấp NFT
+Chủ xe phát hành một NFT đại diện cho quyền truy cập xe.
+NFT chứa metadata gồm:
+ID xe
+Thời gian thuê hợp lệ
+Ví được phép mở khóa
+2️⃣ Người thuê nhận NFT
+Khi hoàn tất thanh toán, NFT được gửi vào ví Cardano của người thuê.
+3️⃣ Xác thực quyền truy cập
+Người thuê đến gần xe và mở ứng dụng di động của hệ thống.
+Quét mã QR trên xe hoặc kết nối Bluetooth/NFC.
+Ứng dụng kiểm tra ví của người thuê có NFT hợp lệ hay không.
+4️⃣ Mở khóa xe nếu NFT hợp lệ
+Nếu NFT hợp lệ, ứng dụng gửi tín hiệu mở khóa đến bộ điều khiển trên xe (ESP32/Raspberry Pi).
+Xe được mở khóa & có thể khởi động.
+5️⃣ Thu hồi NFT sau khi thuê xong (phần này ta dùng Burn nft nhé ae)
+Khi thời gian thuê kết thúc, NFT bị thu hồi hoặc mất hiệu lực.
+Xe sẽ từ chối mở khóa nếu người thuê không còn sở hữu NFT.
+
+📌 So Sánh Mô Hình Truyền Thống vs NFT-Based
+Tiêu chí		Thuê xe truyền thống			NFT-based (Blockchain & IoT)
+Xác minh danh tính	Dễ bị giả mạo giấy tờ			Xác thực bằng DID or ví Cardano (ở đây ta dùng ví)
+Chi phí trung gian	20-30% (Hertz, Turo, Grab)		Gần như 0% (P2P, blockchain)
+Thời gian nhận xe	Chờ duyệt, ký hợp đồng			Quét ví → Mở khóa ngay
+Minh bạch hợp đồng	Chủ xe có thể sửa hợp đồng		Hợp đồng thông minh, bất biến
+Bảo vệ tài sản		Dựa vào pháp luật (tốn thời gian)	Tiền cọc bị khóa tự động
+Gian lận thanh toán	Có thể dùng thẻ tín dụng giả		Thanh toán blockchain, không thể đảo ngược
+Quản lý lịch sử xe	Có thể bị chỉnh sửa			Ghi lại trên blockchain vĩnh viễn
+
+**** Bổ sung : Ta sẽ thêm vài điều kiện khi thuê xe nữa, một lần thuê thời gian có thể chia thành nhiều chu kì nhỏ, mỗi lần thì người thuê phải
+thanh toán đúng hạn, nếu ko thì mất cọc(cọc ở đây là số tiền thuê xe khóa ban đầu) và sau mỗi lần thanh toán thì người cho thuê có thể rút được
+tiền này. Còn tiền cọc thì vẫn để đó để khóa cho đến hết chu kì thuê thì tiền cọc có thể được trả về người thuê.
+
+Tiêu chí		Thuê Xe Truyền Thống					Thuê Xe Phi Tập Trung (NFT & Smart Contract)
+Quản lý cọc		Chủ xe có thể giữ cọc vô lý, tranh chấp khó giải quyết.	Smart contract giữ cọc tự động, hoàn cọc nếu thanh toán đúng hạn.
+Thanh toán		Thường qua tiền mặt, thẻ tín dụng, dễ gian lận.		Thanh toán bằng stablecoin trên blockchain, nhanh & minh bạch.
+Mở khóa xe		Cần chìa khóa vật lý hoặc ứng dụng tập trung.		NFT hoạt động như chìa khóa số, không thể làm giả.
+Kiểm soát hạn mức thuê	Chủ xe tự kiểm soát, dễ thay đổi giá & điều kiện thuê.	Điều kiện thuê được mã hóa trên smart contract, không thể thay đổi.
+Trễ thanh toán		Chủ xe phải đòi tiền, kiện tụng nếu bị quỵt.		Smart contract tự động trừ cọc nếu thanh toán trễ.
+Lịch sử giao dịch	Có thể bị sửa đổi, khó kiểm chứng.			Ghi lại vĩnh viễn trên blockchain, không thể chỉnh sửa.
+Xếp hạng & đánh giá	Do nền tảng tập trung kiểm soát, có thể bị thao túng.	Đánh giá phi tập trung, công khai & minh bạch.
+Ứng dụng mở rộng	Chỉ áp dụng cho thuê xe truyền thống.			Có thể mở rộng sang smart home, Airbnb, scooter điện.
+
