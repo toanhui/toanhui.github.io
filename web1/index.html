@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#160111" />
+		<title>Baby Asteroid | $BBA</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+	<body>
+		<svg class="svg-sprite" aria-hidden="true" focusable="false">
+			<symbol id="icon-cubes" viewBox="0 0 24 24">
+				<path d="M12 2.7 19.1 6.8v7L12 17.9l-7.1-4.1v-7L12 2.7Zm0 2.3L7.2 7.7 12 10.4l4.8-2.7L12 5Zm-5.2 4.4v3.1l4.2 2.4v-3.1L6.8 9.4Zm10.4 0-4.2 2.4v3.1l4.2-2.4V9.4Z" />
+				<path d="m6.2 10.1 5.8 3.4 5.8-3.4 1.6 1L12 15.5l-7.4-4.4 1.6-1Z" />
+			</symbol>
+			<symbol id="icon-telegram" viewBox="0 0 24 24">
+				<path d="M20.7 4.3 3.8 10.7c-1 .4-.9 1.9.1 2.2l4.3 1.1 1.5 4.9c.3.8 1.3 1 1.8.4l2.5-3.1 4.1 3c.8.6 1.9.2 2.1-.8l2.4-12.5c.2-1.1-.8-2-1.9-1.6Zm-10.8 9.2-.4 3.6-.9-3 7.6-6.2-6.3 5.6Z" />
+			</symbol>
+			<symbol id="icon-twitter" viewBox="0 0 24 24">
+				<path d="M18.9 7.3c.9-.1 1.7-.5 2.4-1.1-.3.9-1 1.7-1.8 2.2.8 0 1.5-.2 2.2-.6-.5.9-1.2 1.6-2 2.2 0 .2 0 .5.1.7 0 5.5-4.4 9.5-10 9.5-1.9 0-3.7-.6-5.2-1.6h.8c1.7 0 3.1-.5 4.3-1.4-1.5 0-2.7-1-3.1-2.4.2.1.5.1.8.1.3 0 .6 0 .9-.1-1.6-.3-2.8-1.7-2.8-3.4v-.1c.5.3 1 .4 1.6.5-1-.6-1.6-1.7-1.6-2.8 0-.6.2-1.2.5-1.7 1.8 2.1 4.6 3.4 7.5 3.6-.1-.3-.1-.6-.1-.9 0-2.2 1.8-3.9 4-3.9 1.2 0 2.2.4 3 1.2Z" />
+			</symbol>
+			<symbol id="icon-tag" viewBox="0 0 24 24">
+				<path d="M11.6 3H5.8C4.8 3 4 3.8 4 4.8v5.7c0 .5.2.9.5 1.3l7.6 7.6c.7.7 1.9.7 2.6 0l4.8-4.8c.7-.7.7-1.9 0-2.6l-7.6-7.6c-.4-.3-.8-.4-1.3-.4Zm-3.7 5.5a1.6 1.6 0 1 1 0-3.2 1.6 1.6 0 0 1 0 3.2Z" />
+			</symbol>
+			<symbol id="icon-check" viewBox="0 0 24 24">
+				<path d="m12 2.5 2.4 1.5 2.9-.2 1.3 2.4 2.4 1.3-.2 2.8 1.5 2.4-1.5 2.4.2 2.8-2.4 1.3-1.3 2.4-2.9-.2-2.4 1.5-2.4-1.5-2.9.2-1.3-2.4-2.4-1.3.2-2.8-1.5-2.4 1.5-2.4-.2-2.8 2.4-1.3 1.3-2.4 2.9.2L12 2.5Zm-1.1 12.8 5.1-5.1-1.4-1.4-3.7 3.7-2-2-1.4 1.4 3.4 3.4Z" />
+			</symbol>
+			<symbol id="icon-ellipsis" viewBox="0 0 24 24">
+				<circle cx="6" cy="12" r="1.8" />
+				<circle cx="12" cy="12" r="1.8" />
+				<circle cx="18" cy="12" r="1.8" />
+			</symbol>
+			<symbol id="icon-comment" viewBox="0 0 24 24">
+				<path d="M4 5.5C4 4.7 4.7 4 5.5 4h13c.8 0 1.5.7 1.5 1.5v8c0 .8-.7 1.5-1.5 1.5H9l-4.5 3v-3H5.5c-.8 0-1.5-.7-1.5-1.5v-8Z" />
+			</symbol>
+			<symbol id="icon-retweet" viewBox="0 0 24 24">
+				<path d="M7 7h9.1l-1.8-1.8 1.4-1.4L20 8.1l-4.3 4.3-1.4-1.4L16.1 9H7a2 2 0 0 0-2 2v1H3v-1a4 4 0 0 1 4-4Zm10 10H7.9l1.8 1.8-1.4 1.4L4 15.9l4.3-4.3 1.4 1.4L7.9 15H17a2 2 0 0 0 2-2v-1h2v1a4 4 0 0 1-4 4Z" />
+			</symbol>
+			<symbol id="icon-heart" viewBox="0 0 24 24">
+				<path d="m12 20.5-1.4-1.2C5.6 14.8 3 12.5 3 9.7c0-2.3 1.8-4.1 4.1-4.1 1.4 0 2.8.7 3.8 1.9.9-1.2 2.3-1.9 3.7-1.9 2.3 0 4.1 1.8 4.1 4.1 0 2.8-2.6 5.1-7.6 9.6L12 20.5Z" />
+			</symbol>
+			<symbol id="icon-bookmark" viewBox="0 0 24 24">
+				<path d="M7 3.5h10c1.1 0 2 .9 2 2v15l-7-3.6-7 3.6v-15c0-1.1.9-2 2-2Z" />
+			</symbol>
+			<symbol id="icon-arrow-down-circle" viewBox="0 0 24 24">
+				<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 5v6.2l2.2-2.2 1.4 1.4-4.6 4.6-4.6-4.6 1.4-1.4L11 13.2V7h2Z" />
+			</symbol>
+		</svg>
+		<header class="hero" id="top">
+			<div class="stars-layer hero-stars" data-stars="46" data-tone="light" aria-hidden="true"></div>
+			<div class="hero-ribbons" aria-hidden="true"></div>
+
+			<div class="container">
+				<nav class="topbar" aria-label="Social media">
+					<a class="avatar-chip" href="#story">
+						<img
+							src="./asset/logo.jpg"
+							alt="Baby Asteroid logo"
+						/>
+						<span>@babyasteroid</span>
+					</a>
+
+					<div class="social-links">
+						<a href="#buy" aria-label="Buy Baby Asteroid">
+							<svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-cubes"></use></svg>
+						</a>
+						<a href="#gallery" aria-label="Open Telegram">
+							<svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-telegram"></use></svg>
+						</a>
+						<a href="#gallery" aria-label="Open Twitter">
+							<svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-twitter"></use></svg>
+						</a>
+					</div>
+				</nav>
+
+				<div class="hero-content">
+					<div class="hero-copy reveal">
+						<div class="hero-copy-inner" data-parallax="14">
+							<p class="eyebrow">☄️👶 More Than a Mascot</p>
+							<h1>BABY ASTEROID</h1>
+							<div class="tagline-frame">
+								<span>$BBA</span>
+							</div>
+							<p class="lead">
+								More than a mascot&mdash;it's a symbol of small dreams going big. In a universe of
+								possibilities, even the smallest can make impact.
+							</p>
+
+							<div class="hero-actions">
+								<a class="cta-button" href="#buy">
+									<svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-tag"></use></svg>
+									<span>BUY $BBA</span>
+								</a>
+								<a class="ghost-link" href="#gallery">SEE IMPACT</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="hero-portrait reveal">
+						<div class="portrait-shell" data-parallax="22">
+							<div class="portrait-ring">
+								<img
+									src="./asset/contetnt.jpg"
+									alt="Baby Asteroid portrait"
+								/>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<a class="scroll-cue" href="#story" aria-label="Scroll to story">
+				<span></span>
+			</a>
+		</header>
+
+		<main>
+			<section class="red-stage" id="story">
+				<div class="stars-layer section-stars" data-stars="72" data-tone="warm" data-flow="split" aria-hidden="true"></div>
+
+				<div class="container story-grid">
+					<div class="reveal">
+						<article class="tweet-card tilt-card">
+							<div class="tweet-header">
+								<div class="author-block">
+									<img
+										src="./asset/contetnt.jpg"
+										alt="Baby Asteroid author"
+									/>
+									<div>
+										<strong>
+											Baby Asteroid
+											<svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg>
+										</strong>
+										<span>@babyasteroid · now</span>
+									</div>
+								</div>
+
+								<button class="tweet-action" type="button" aria-label="Open options">
+									<svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-ellipsis"></use></svg>
+								</button>
+							</div>
+
+							<div class="tweet-body">
+								<p><strong>“Baby Asteroid” ☄️👶 $BBA ☄️</strong></p>
+								<p>More than a mascot&mdash;it's a symbol of small dreams going big.</p>
+								<p>In a universe of possibilities, even the smallest can make impact.</p>
+
+								<div class="tweet-media">
+									<img
+										src="./asset/banner.jpg"
+										alt="Baby Asteroid universe banner"
+									/>
+								</div>
+
+								<div class="tweet-reply">
+									<div class="reply-author">
+										<span class="reply-name">$BBA</span>
+										<span class="reply-handle">@babyasteroid</span>
+									</div>
+									<p>If money is already a meme, we just made it honest.</p>
+								</div>
+							</div>
+
+							<div class="tweet-meta" aria-label="Engagement statistics">
+								<span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-comment"></use></svg> 645</span>
+								<span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-retweet"></use></svg> 484</span>
+								<span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-heart"></use></svg> 6.8K</span>
+								<span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-bookmark"></use></svg> 278</span>
+							</div>
+						</article>
+					</div>
+
+					<div class="story-copy reveal">
+						<p class="section-kicker">BABY ASTEROID</p>
+						<h2>$BBA</h2>
+						<p>Small dreams going big.</p>
+						<a class="down-button" href="#gallery" aria-label="Scroll to gallery">
+							<svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-arrow-down-circle"></use></svg>
+						</a>
+					</div>
+				</div>
+
+				<section class="gallery-block" id="gallery">
+					<div class="container">
+						<h2 class="gallery-title reveal">Baby Asteroid</h2>
+
+						<div class="gallery-grid">
+							<div class="gallery-item reveal gallery-item-banner">
+								<figure class="gallery-card tilt-card gallery-card-banner">
+									<img
+										src="./asset/c2.jpg"
+										alt="Baby Asteroid small dreams banner"
+									/>
+									<figcaption>Small Dreams</figcaption>
+								</figure>
+							</div>
+							
+
+							
+
+							<div class="gallery-item reveal">
+								<figure class="gallery-card tilt-card illustration-card">
+									<img src="./asset/tu.jpg" alt="Baby Asteroid universe scene" />
+									<figcaption>Universe</figcaption>
+								</figure>
+							</div>
+
+							<div class="gallery-item reveal">
+								<figure class="gallery-card tilt-card illustration-card">
+									<img src="./asset/c3.jpg" alt="Baby Asteroid big impact artwork" />
+									<figcaption>Big Impact</figcaption>
+								</figure>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+
+			<section class="buy-panel" id="buy">
+				<div class="buy-section-top" aria-hidden="true"></div>
+				<div class="stars-layer buy-stars" data-stars="40" data-tone="light" aria-hidden="true"></div>
+				<div class="buy-ribbons" aria-hidden="true"></div>
+
+				<div class="container buy-grid">
+					<div class="buy-copy">
+						<div class="reveal">
+							<article class="info-card">
+								<h2>“Baby Asteroid” ☄️👶 $BBA ☄️</h2>
+								<p>
+									More than a mascot&mdash;it's a symbol of small dreams going big.
+								</p>
+								<p>
+									In a universe of possibilities, even the smallest can make impact.
+								</p>
+								<p>If money is already a meme, we just made it honest.</p>
+							</article>
+						</div>
+
+						<div class="buy-footer reveal">
+							<h3>BABY ASTEROID</h3>
+							<a class="cta-button" href="#top">
+								<svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-tag"></use></svg>
+								<span>BUY $BBA</span>
+							</a>
+
+							<div class="social-links social-links-centered">
+								<a href="#top" aria-label="Open contract">
+									<svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-cubes"></use></svg>
+								</a>
+								<a href="#top" aria-label="Open Telegram">
+									<svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-telegram"></use></svg>
+								</a>
+								<a href="#top" aria-label="Open Twitter">
+									<svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-twitter"></use></svg>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="buy-art reveal">
+						<div class="art-frame tilt-card">
+							<div class="mascot-poster">
+								<img src="./asset/banner2.jpg" alt="Baby Asteroid poster artwork" />
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
